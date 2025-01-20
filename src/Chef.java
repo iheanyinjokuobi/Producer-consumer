@@ -17,10 +17,8 @@ public class Chef implements Runnable{
     @Override
     public void run() {
         for (int j = 0; j < 20; j++) {
-            // only cook if the agent has dropped the other 2 ingredients
-            if (table.getContent().size() >= 2){
-                table.removeIngredients(ingredient); // clear the table
-            }
+            // chef tries to cook
+            table.removeIngredients(ingredient); // clear the table
 
             // make the chef program rest
             try{

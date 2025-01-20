@@ -15,12 +15,8 @@ public class Agent implements Runnable {
         for (int i = 0; i < 20; i++) {
             String[] options = new String[]{"Rice", "Nori", "Filling"};
 
-            // add 2 ingredients only if empty
-            if (table.getContent().isEmpty()){
-                table.addIngredient(options);
-            }else{
-                System.out.println("The table is not empty");
-            }
+            // agent tries to place the 2 ingredients from the given options
+            table.addIngredient(options);
 
             // make the agent wait a bit
             try{
@@ -28,5 +24,6 @@ public class Agent implements Runnable {
             }catch (Exception e){}
 
         }
+
     }
 }
